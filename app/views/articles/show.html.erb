@@ -1,0 +1,7 @@
+<!-- show.html.erb -->
+<article>
+  <h1 class="border-bottom"><%= @article.title %></h1>
+  <%= link_to ("<i class=\"fa fa-pencil\"></i>").html_safe, edit_article_path(@article) %>
+  <%= link_to ("<i class=\"fa fa-trash-o\"></i>").html_safe, article_path(@article), method: :delete, data: {confirm: "Do you want to delete #{@article.title}?" }   %>
+  <p><%= @article.content %></p>
+</article>
